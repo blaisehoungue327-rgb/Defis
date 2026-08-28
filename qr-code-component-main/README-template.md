@@ -14,10 +14,7 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
   - [Useful resources](#useful-resources)
   - [AI Collaboration](#ai-collaboration)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
+- 
 ## Overview
 
 ### Screenshot
@@ -35,7 +32,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Links
 
 - Solution URL:[GitHub Repository](https://github.com/blaisehoungue327-rgb/Defis/tree/main/qr-code-component-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [qr-code-component-main](https://qr-code-component-main-six-sigma.vercel.app)
 
 ## My process
 
