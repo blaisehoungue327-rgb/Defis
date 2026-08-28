@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | QR code component</title>
+  <style>
+    :root{
+--White: hsl(0, 0%, 100%);
+--Slate-300: hsl(212, 45%, 89%);
+--Slate-500: hsl(216, 15%, 48%);
+--Slate-900: hsl(218, 44%, 22%);
+
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--Slate-300);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      flex-direction: column;
+    }
+    .carte{
+      background-color: var(--White);
+      padding: 1rem;
+      border-radius: 0.75rem;
+      text-align: center;
+      box-shadow: 0 1rem 2rem hsl(218, 44%, 22%, 0.15);
+      width: 100%;
+      max-width: 320px;
+}
+    .qr-image{
+      width: 100%;
+      border-radius: 0.75rem;
+      display: block;
+}
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+    .carte-titre{
+      color: var(--Slate-900);
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-top: 1.5rem;
+      line-height: 1.2;
+    }
+    .carte-texte{
+      color: var(--Slate-500);
+      font-size: 15px;
+      font-weight: 400;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      margin-top: 1rem;
+    }
+    .attribution{
+      margin-top: 1rem;
+      text-align: center;
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <div class="carte">
+      <img src="images/image-qr-code.png" alt="QR code" class="qr-image">
+      <h1 class="carte-titre">Improve your front-end skills by building projects</h1>
+      <p class="carte-texte">Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</p>
+    </div>
+  </main>
+  
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Blaise</a>.
+  </footer>
+</body>
+</html>
