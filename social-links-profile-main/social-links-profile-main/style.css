@@ -4,6 +4,12 @@
     --Grey-700: hsl(0, 0%, 20%);
     --Grey-800: hsl(0, 0%, 12%);
     --Grey-900: hsl(0, 0%, 8%);
+    --color-footer: hsl(228, 45%, 44%);
+    --font-small: 0.875rem; /* avant: 14px */
+    --border-radius-small: 0.5rem; /* avant: 8px */
+    --avatar-size: clamp(5rem, 15vw, 7rem); /* avant: 6.25rem (100px) */
+    --gap-small: clamp(0.5rem, 1.5vw, 1rem); /* avant: 0.7rem */
+    --padding-base: clamp(0.8rem, 2vw, 1.5rem); /* avant: 1rem */
 }
 *{
     box-sizing: border-box;
@@ -24,7 +30,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.7rem;
+    gap: var(--gap-small); /* avant: 0.7rem */
     padding: 0.6rem;
     width: 100%;
    
@@ -33,12 +39,13 @@ body{
     background-color: var(--Grey-700);
     width: 100%;
     text-align: center;
-    padding: 0.8rem;
+    padding-block: 0.8rem; /* avant: padding: 0.8rem */
+    padding-inline: 0.8rem;
     text-decoration: none;
     color: var(--White);
     font-weight: 500;
-    border-radius: 0.5rem;
-    font-size: 14px;
+    border-radius: var(--border-radius-small);
+    font-size: var(--font-small); /* avant: 14px */
     &:hover{
         background-color: var(--Green);
     }
@@ -48,13 +55,13 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 0.7rem;
+    gap: var(--gap-small); /* avant: 0.7rem */
     width: 100%;
-    max-width: 360px;
+    max-width: 22.5rem; /* avant: 360px */
     background-color: var(--Grey-800);
-    padding: 1rem;
+    padding: var(--padding-base); /* avant: 1rem */
     /* min-height: 400px; */
-    border-radius: 8px;
+    border-radius: 0.5rem; /* avant: 8px */
 }
 .name{
     color: var(--White);
@@ -63,25 +70,25 @@ main{
 }
 .location{
     color: var(--Green);
-    font-size: 14px;
+    font-size: var(--font-small); /* avant: 14px */
     font-weight: 500;
 }
 .description{
     color: var(--White);
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 400;
     text-align: center;
 }
 .avatar{
-    width: 80px;
-    height: 80px;
+    width: var(--avatar-size); /* avant: 100px */
+    height: var(--avatar-size); /* avant: 100px */
     border-radius: 50%;
     object-fit: cover;
     /* margin-bottom: 1rem; */
     display: block;
 }
 .description{
-    margin-top: 0.8rem;
+     margin-block-start: calc(var(--padding-base) - 0.2rem); /* avant: margin-top: 0.8rem */
 }
 .profile{
     display: flex;
@@ -93,13 +100,13 @@ main{
 .attribution {
     font-size: 0.6875rem; 
     text-align: center;
-    margin-top: 10px; 
-    color: white; 
+    margin-block-start: 0.625rem; /* avant: margin-top: 10px */ 
+    color: var(--White);  
 }
 .attribution a {
     color: hsl(228, 45%, 44%); 
 }
-@media(max-width:361px){
+@media(min-width:361px){
     main{
        padding: 1.5rem; 
     }
@@ -120,6 +127,6 @@ main{
         gap: .5rem;
     }
     .description{
-        margin-top: 1rem;
+      margin-block-start: 1rem; /* avant: margin-top: 1rem */  
     }
 }
