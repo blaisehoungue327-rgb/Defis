@@ -28,8 +28,8 @@ Create a profile with Jessica Randall's information and social links, with a res
 
 ### Links
 
-- Solution URL: [social-links-profile-main/social-links-profile-main](https://github.com/blaisehoungue327-rgb/Defis/tree/main/social-links-profile-main/social-links-profile-main)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [social-links-profile-main](https://github.com/blaisehoungue327-rgb/Defis/tree/main/social-links-profile-main/social-links-profile-main)
+- Live Site URL: [Add live site URL here](https://social-links-profile-main-five-gold.vercel.app)
 
 ## My process
 
