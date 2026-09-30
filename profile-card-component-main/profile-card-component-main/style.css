@@ -1,0 +1,136 @@
+:root{   
+--Blue-600: hwb(185 10% 32%);
+--Navy-950: hsl(229, 23%, 23%);
+--Gray-500: hsl(227, 10%, 46%);
+--Gray-100: hsl(225, 10%, 92%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Kumbh Sans", sans-serif;
+    background-color: var(--Blue-600); /* couleur de fond du challenge */
+    background-image: url("./images/bg-pattern-top.svg"), url("./images/bg-pattern-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 50vw bottom 45vh, left 50vw top 55vh;
+    background-size: 52rem, 52rem;
+    min-height: 100vh;
+    margin: 0;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main{
+    /* La carte garde une largeur proche du modèle, sans dépasser sur mobile. */
+    width: min(350px, calc(100% - 48px));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* La hauteur de la carte dépend maintenant de son contenu. */
+    min-height: 0;
+    /* On supprime la largeur minimale qui agrandissait la carte. */
+    min-width: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* Arrondit les coins de l'ensemble et masque le débordement de la bannière. */
+    border-radius: 15px;
+    /* Garde la bannière et la partie blanche dans les coins arrondis. */
+    overflow: hidden;
+}
+.card-2{
+     background-color: white;
+     /* Sert de repère pour placer la photo en superposition. */
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     width: 100%;
+    /* Réserve l'espace nécessaire sous la photo superposée. */
+    padding-top: 4.5rem;
+    /* Ajoute de l'espace sous les statistiques. */
+    padding-bottom: 1rem;
+     gap: 1rem;
+}
+
+.card-1{
+    width: 100%;
+    z-index: 2;
+}
+
+.pattern-card{
+    width: 100%;
+    /* Donne à la bannière la hauteur visible dans le modèle. */
+    height: 140px;
+    /* Recadre l'image pour remplir la bannière sans la déformer. */
+    object-fit: cover;
+    display: block;
+    z-index: 2;
+}
+/* Positionne la photo au centre, à cheval sur la bannière et la carte blanche. */
+.profile-img{
+    /* Permet de superposer la photo aux autres éléments. */
+    position: absolute;
+    /* Aligne horizontalement la photo au centre de la carte. */
+    left: 50%;
+    /* Place le centre de la photo sur le bord supérieur de la partie blanche. */
+    top: 0;
+    /* Recentre la photo et la remonte de la moitié de sa hauteur. */
+    transform: translate(-50%, -50%);
+    /* Fixe la taille de la photo comme dans le modèle. */
+    width: 96px;
+    /* Fixe la hauteur de la photo pour conserver un cercle. */
+    height: 96px;
+    /* Recadre la photo sans la déformer. */
+    object-fit: cover;
+    /* Crée le contour blanc autour de la photo. */
+    border: 5px solid white;
+    /* Rend la photo ronde. */
+    border-radius: 50%;
+    z-index: 5;
+}
+.description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: .5rem;
+}
+.stats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    /* Sépare les statistiques avec une ligne gris clair comme sur le modèle. */
+    border-top: 1px solid var(--Gray-100);
+    padding: 1rem;
+}
+.stat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    /* gap:s 1rem; */
+}
+
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;    
+    margin-top: 1rem;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+
+}
